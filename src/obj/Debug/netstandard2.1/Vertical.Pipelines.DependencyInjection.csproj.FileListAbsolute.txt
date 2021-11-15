@@ -1,0 +1,12 @@
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/bin/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.deps.json
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/bin/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.dll
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/bin/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.pdb
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/bin/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.xml
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.AssemblyInfoInputs.cache
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.AssemblyInfo.cs
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.csproj.CoreCompileInputs.cache
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.dll
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.xml
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.pdb
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.csproj.AssemblyReference.cache
+/Users/danielingalla/Dev/vertical/vertical-pipelines-dependencyinjection/src/obj/Debug/netstandard2.1/Vertical.Pipelines.DependencyInjection.GeneratedMSBuildEditorConfig.editorconfig
