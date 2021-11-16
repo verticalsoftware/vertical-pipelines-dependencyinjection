@@ -45,7 +45,7 @@ namespace Vertical.Pipelines.DependencyInjection.Tests
 
                 app.UseMiddleware<MiddlewareBlue>();
 
-            }, ServiceLifetime.Scoped);
+            });
 
             var provider = serviceCollection.BuildServiceProvider();
 
