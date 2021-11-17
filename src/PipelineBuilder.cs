@@ -11,20 +11,22 @@ namespace Vertical.Pipelines.DependencyInjection
     /// <typeparam name="TContext">Contextual data object passed through the pipeline components.</typeparam>
     public class PipelineBuilder<TContext> : IPipelineBuilder<TContext> where TContext : class
     {
-        private readonly IServiceCollection _serviceCollection;
         private readonly ServiceLifetime _middlewareLifetime;
         private readonly Type _pipelineMiddlewareType = typeof(IPipelineMiddleware<TContext>);
 
         internal PipelineBuilder(IServiceCollection serviceCollection, ServiceLifetime middlewareLifetime)
         {
-            _serviceCollection = serviceCollection;
+            ApplicationServices = serviceCollection;
             _middlewareLifetime = middlewareLifetime;
         }
-        
+
+        /// <inheritdoc />
+        public IServiceCollection ApplicationServices { get; }
+
         /// <inheritdoc />
         public IPipelineBuilder<TContext> Use(Func<TContext, PipelineDelegate<TContext>, CancellationToken, Task> implementation)
         {
-            _serviceCollection.Add(ServiceDescriptor.Describe(
+            ApplicationServices.Add(ServiceDescriptor.Describe(
                 _pipelineMiddlewareType,
                 _ => new MiddlewareAction<TContext>(implementation),
                 _middlewareLifetime));
@@ -35,7 +37,7 @@ namespace Vertical.Pipelines.DependencyInjection
         /// <inheritdoc />
         public IPipelineBuilder<TContext> UseMiddleware<T>() where T : IPipelineMiddleware<TContext>
         {
-            _serviceCollection.Add(ServiceDescriptor.Describe(
+            ApplicationServices.Add(ServiceDescriptor.Describe(
                 _pipelineMiddlewareType,
                 typeof(T),
                 _middlewareLifetime));
@@ -46,7 +48,7 @@ namespace Vertical.Pipelines.DependencyInjection
         /// <inheritdoc />
         public IPipelineBuilder<TContext> UseMiddleware<T>(Func<IServiceProvider, T> implementationFactory) where T : IPipelineMiddleware<TContext>
         {
-            _serviceCollection.Add(ServiceDescriptor.Describe(
+            ApplicationServices.Add(ServiceDescriptor.Describe(
                 _pipelineMiddlewareType,
                 provider => implementationFactory(provider),
                 _middlewareLifetime));
