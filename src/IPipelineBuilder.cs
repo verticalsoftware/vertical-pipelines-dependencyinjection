@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Vertical.Pipelines.DependencyInjection
 {
@@ -11,6 +12,11 @@ namespace Vertical.Pipelines.DependencyInjection
     /// <typeparam name="TContext">Contextual data object passed through the pipeline components.</typeparam>
     public interface IPipelineBuilder<TContext> where TContext : class
     {
+        /// <summary>
+        /// Gets the application services instance.
+        /// </summary>
+        IServiceCollection ApplicationServices { get; }
+        
         /// <summary>
         /// Registers services that wrap the provided handling delegate into a task composed
         /// within a pipeline.
