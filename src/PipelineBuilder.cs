@@ -14,9 +14,14 @@ namespace Vertical.Pipelines.DependencyInjection
         private readonly ServiceLifetime _middlewareLifetime;
         private readonly Type _pipelineMiddlewareType = typeof(IPipelineMiddleware<TContext>);
 
-        internal PipelineBuilder(IServiceCollection serviceCollection, ServiceLifetime middlewareLifetime)
+        /// <summary>
+        /// Creates a new instance of this type.
+        /// </summary>
+        /// <param name="serviceCollection">Service collection</param>
+        /// <param name="middlewareLifetime">Service lifetime for the pipeline</param>
+        public PipelineBuilder(IServiceCollection serviceCollection, ServiceLifetime middlewareLifetime)
         {
-            ApplicationServices = serviceCollection;
+            ApplicationServices = serviceCollection ?? throw new ArgumentNullException(nameof(serviceCollection));
             _middlewareLifetime = middlewareLifetime;
         }
 
