@@ -7,7 +7,7 @@
     <Title>vertical-pipelines-dependencyinjection</Title>
     <Description>Provides registration extensions for Microsoft.Extensions.DependencyInjection.</Description>
     <Authors>Vertical Software Contributors</Authors>
-    <VersionPrefix>1.1.2</VersionPrefix>
+    <VersionPrefix>1.1.3</VersionPrefix>
     <PackageId>vertical-pipelines-dependencyinjection</PackageId>
     <PackageTags>infrastructure;middleware;utilities;framework</PackageTags>
     <PackageProjectUrl>https://github.com/verticalsoftware/vertical-pipelines-dependencyinjection</PackageProjectUrl>
