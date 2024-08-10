@@ -2,7 +2,7 @@
 
 Generic "middleware" pipelines.
 
-![.net](https://img.shields.io/badge/Frameworks-.netstandard2.0+.netstandard21+net5.0+net6.0-purple)
+![.net](https://img.shields.io/badge/Frameworks-.netstandard2.0-purple)
 ![GitHub](https://img.shields.io/github/license/verticalsoftware/vertical-pipelines-dependencyinjection)
 ![Package info](https://img.shields.io/nuget/v/vertical-pipelines-dependencyinjection.svg)
 
